@@ -14,14 +14,14 @@ const fetchBreedDescription = function(breedName, callback) {
     if (data) {
       callback(null,data.description);
     } else {
-      callback(null, "breed not found")
+      callback(null, "breed not found");
     }
 
   });
 };
 
 // [] :destructuring assignment in javascript used to
-// make sure there is something used in the array 
-// json can also be an array 
+// make sure there is something used in the array
+// json can also be an array
 
 module.exports = {fetchBreedDescription};
