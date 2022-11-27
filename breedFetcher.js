@@ -1,8 +1,8 @@
 const request = require('request');
 
-const getBreed = function(nameOfBreed, callback) {
+const fetchBreedDescription = function(breedName, callback) {
 
-  request(`https://api.thecatapi.com/v1/breeds/search?q=${nameOfBreed}`, (error, response, body) => {
+  request(`https://api.thecatapi.com/v1/breeds/search?q=${breedName}`, (error, response, body) => {
   
     if (error) {
       return callback(error,null);
@@ -24,4 +24,4 @@ const getBreed = function(nameOfBreed, callback) {
 // make sure there is something used in the array 
 // json can also be an array 
 
-module.exports = {getBreed};
+module.exports = {fetchBreedDescription};
